@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Board Group2</title>
+    <script
+      src="https://kit.fontawesome.com/484e01476d.js"
+      crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="content" class="container">
+      <div class="header">
+        <div class="title">Welcome To Text Board</div>
+        <div class="bar"></div>
+      </div>
+
+      <div class="input-generate">
+        <div>
+          <input
+            class="input"
+            type="text"
+            id="inputText"
+            style="border: 1px solid black"
+            placeholder="Input your text here" />
+        </div>
+        <div>
+          <button id=" generate" class="btn-generate">
+            Generate <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="styleYourText">Style Your Text Here</div>
+
+      <!--  bott -->
+
+      <div class="styling">
+        <div class="basic-style">
+          <div class="basic-wrapper">
+            <div class="item text-color-section">
+              <div class="text-color-des">
+                <div class="myTextColor">Text Color</div>
+                <div class="myTextColorBar"></div>
+              </div>
+              <div class="textColorPicker">
+                <input type="color" id="textColorPicker" />
+              </div>
+            </div>
+
+            <div class="item text-size-section">
+              <div class="text-size-des">
+                <div class="myTextColor">Text Size</div>
+                <div class="myTextColorBar"></div>
+              </div>
+              <input
+                type="number"
+                id="fontSize-selector"
+                class="font"
+                value="250" />
+            </div>
+
+            <!--  zany -->
+            <div class="item text-font-section">
+              <div class="text-font-des">
+                <div class="myTextColor">Fonts</div>
+                <div class="myTextColorBarF"></div>
+              </div>
+              <div class="selector font">
+                <select id="font-selector">
+                  <option id="Arial" value="Arial">Arial</option>
+                  <option id="Jersey25" value="jersey25">
+                    Jersey 25 Charter
+                  </option>
+                  <option id="pacifico" value="pacifico">Pacifico</option>
+                  <option id="poetsen-one" value="poetsen-one">
+                    Poetsen One
+                  </option>
+                  <option id="dancing-script" value="dancing-script">
+                    Dancing Script
+                  </option>
+                  <option id="lobster" value="lobster">Lobster</option>
+                  <option id="audiowide" value="audiowide">Audiowide</option>
+                  <option id="jersey-15" value="jersey-15">Jersey 15</option>
+                  <option id="rubik-moonrocks" value="rubik-moonrocks">
+                    Rubik Moonrocks
+                  </option>
+                  <option id="workbrench" value="workbench">Workbench</option>
+                  <option id="jacquard" value="Jacquard">Jacquard</option>
+                  <option id="sevillana" value="Sevillana">Sevillana</option>
+                  <option id="danfo" value="danfo">Danfo</option>
+                  <option id="Verdana" value="Verdana">Verdana</option>
+                  <option id="Tohoma" value="Tahoma">Tahoma</option>
+                  <option id="Georgia" value="Georgia">Georgia</option>
+                  <option id="Times-New-Roman" value="Times-New-Roman">
+                    Times New Roman
+                  </option>
+                  <option id="Serif" value="Serif">Serif</option>
+                  <option id="Brush-Script-MT" value="Brush-Script-MT">
+                    Brush Script MT
+                  </option>
+                  <option id="Cooper-Black" value="Cooper-Black">
+                    Cooper Black
+                  </option>
+                  <option
+                    id="Konkhmer-sleokchher"
+                    value="konkhmer-sleokchher-V">
+                    ស្លឹកឈើ
+                  </option>
+                  <option id="noto-serif" value="noto-serif-khmer">ណូតូ</option>
+                  <option id="Bayon" value="bayon">បាយ័ន</option>
+                  <option id="siemreap" value="Siemreap">សៀមរាប</option>
+                </select>
+              </div>
+            </div>
+
+            <!--  bott -->
+            <div class="item background-section">
+              <div class="text-background-des">
+                <div class="myTextColor">Background</div>
+                <div class="myTextColorBar"></div>
+              </div>
+              <div class="textColorPicker">
+                <input type="color" id="backgroundColorPicker" />
+              </div>
+            </div>
+          </div>
+          <div class="basic">Basic Style</div>
+        </div>
+
+        <div class="advance-style">
+          <div class="advance-wrapper">
+            <div class="text-animation-section item1">
+              <div class="text-color-des">
+                <div class="myTextColor">Animation</div>
+                <div class="myTextColorBar"></div>
+              </div>
+              <div class="selector">
+                <select id="animation-selector">
+                  <option value="Normal">Normal</option>
+                  <option value="Wave">Wave</option>
+                  <option value="Heavy Wave">Heavy Wave</option>
+                  <option value="Drop Down">Drop Down</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="text-animation-speed-section item2">
+              <div class="text-color-des">
+                <div class="speedWrapper">
+                  <div class="myTextColor">Speed:</div>
+                  <div id="speedValue" class="speedValue">3</div>
+                </div>
+                <div class="mySpeedBar"></div>
+              </div>
+              <div class="selector-speed">
+                <span>1</span>
+                <input
+                  class="speed-indicator"
+                  type="range"
+                  id="speed"
+                  name="speed"
+                  min="1"
+                  max="10"
+                  oninput="updateSpeedValue()" />
+                <span>10</span>
+              </div>
+            </div>
+
+            <div class="frame-style-section item3">
+              <div class="frame-color-des">
+                <div class="myFrameStyle">Frame Style</div>
+                <div class="myFramerBar"></div>
+              </div>
+              <div class="selector">
+                <select id="frame-selector">
+                  <option value="None">None</option>
+                  <option value="Dashed">Dashed</option>
+                  <option value="Solid">Solid</option>
+                  <option value="Inset">Inset</option>
+                  <option value="Double">Double</option>
+                  <option value="Outset">Outset</option>
+                  <option value="Ridge">Ridge</option>
+                  <option value="Outset">Groove</option>
+                  <option value="Hidden">hidden</option>
+                </select>
+              </div>
+            </div>
+            <div class="frame-color-section frameColorDiv item-l">
+              <div class="frame-color-des">
+                <div class="myTextColor">Frame Color</div>
+                <div class="myFrameColorBar"></div>
+              </div>
+              <div class="selector">
+                <select id="frame-color-selector">
+                  <option value="Gold">Gold</option>
+                  <option value="Silvar">Silvar</option>
+                  <option value="Nature">Nature</option>
+                </select>
+              </div>
+            </div>
+            <div class="text-style-section textStyleDiv">
+              <div class="text-color-des">
+                <div class="myTextColor">Text Style</div>
+                <div class="myTextColorBar"></div>
+              </div>
+              <div class="selector">
+                <select id="text-color-style-selector">
+                  <option value="Normal">Normal</option>
+                  <option value="Gradient">Gradient</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="advance">Advance Style</div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="script.js"></script> -->
+
+    <script src="newScript.js"></script>
+  </body>
+</html>
